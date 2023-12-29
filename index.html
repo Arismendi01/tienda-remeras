@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--esto lo copie de esta pagina: https://cdnjs.com/libraries/font-awesome el primer link-->
+    <title>Tienda de remeras</title>
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>Carrito de compras</h1>
+    </header>
+    <main>
+        <section class="contenedor">
+            <!--Contenedor de los elementos-->
+            <div class="contenedor-items">
+                <div class="item">
+                    <span class="titulo-item">Remera 1</span>
+                    <img src="image/remera.png" alt="" class="img-item">
+                    <span class="precio-item">$3.000</span>
+                    <button class="boton-item">Agregar al carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">Remera 2</span>
+                    <img src="image/remera2.png" alt="" class="img-item">
+                    <span class="precio-item">$3.500</span>
+                    <button class="boton-item">Agregar al carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">Remera 3</span>
+                    <img src="image/remera3.png" alt="" class="img-item">
+                    <span class="precio-item">$4.250</span>
+                    <button class="boton-item">Agregar al carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">Remera 4</span>
+                    <img src="image/remera4.png" alt="" class="img-item">
+                    <span class="precio-item">$7.500</span>
+                    <button class="boton-item">Agregar al carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">Remera 5</span>
+                    <img src="image/remera5.png" alt="" class="img-item">
+                    <span class="precio-item">$2.300</span>
+                    <button class="boton-item">Agregar al carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">Remera 6</span>
+                    <img src="image/remera6.png" alt="" class="img-item">
+                    <span class="precio-item">$4.800</span>
+                    <button class="boton-item">Agregar al carrito</button>
+                </div>
+            </div>
+            <!--Carrito de compras-->
+            <div class="carrito">
+                <div class="header-carrito">
+                    <h2>Cesta</h2>
+                </div>
+                <div class="carrito-items">
+                </div>
+                <!--esto es donde el carrito da el total-->
+                <div class="carrito-total">
+                    <div class="fila">
+                        <strong>Tú total</strong>
+                        <span class="carrito-precio-total">
+                            $150.000,00
+                        </span>
+                    </div>
+                    <button class="btn-pagar">Pagar<i class="fa-solid fa-person-walking-luggage"></i></button>
+                    <!--esta la saque de esta pagina: https://fontawesome.com/-->
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>

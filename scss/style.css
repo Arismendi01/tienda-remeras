@@ -1,0 +1,260 @@
+/* Importo las fuentes de google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* Margenes generales de la pagina */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Esta es la parte de arriba de la pagina */
+header {
+    background: url(../image/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+/* Centrar el texto principal */
+header h1 {
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    padding: 30px 0;
+}
+
+/* Ajusto el contenedor de los elementos de como se deben ver */
+.contenedor {
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* Oculto lo que queda fuera del contenedor */
+    contain: paint;
+    /* Verificar me esta cortando las imagenes */
+}
+
+/* Ahora voy a modificar los elementos dentro del contenedor */
+.contenedor .contenedor-items {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    width: 100%;
+    transition: .3s;
+    padding: 1rem;
+}
+
+/* Darle forma a los contenededores de las imagenes o cajas */
+.contenedor .contenedor-items .item {
+    max-width: 200px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+}
+
+/* Darle efectos y sombreado a las cajas */
+.contenedor-items .item:hover {
+    box-shadow: 0 0 10px #667;
+    scale: 1.05;
+}
+
+.contenedor-items .item .img-item {
+    width: 100%;
+}
+
+/* Modificar el titulo de las cajas */
+.contenedor-items .item .titulo-item {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+/* Modificar el precio de las cajas */
+.contenedor-items .item .precio-item {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 1rem;
+}
+
+/* Modificar el boton de compra de las cajas */
+.contenedor-items .item .boton-item {
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: #000;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenedor-items .item .boton-item:hover {
+    scale: 1.05;
+    transform: .3s;
+}
+
+/* Sección carrito de compras */
+
+/* Ajustes al carrito de compras */
+.carrito {
+    border: 1px solid #667;
+    width: 35%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: auto;
+    position: sticky !important;
+    top: 0;
+    transition: .3s;
+    opacity: 0;
+    margin-right: -100%;
+}
+
+/* Ajustes al header del carrito de compras */
+.carrito .header-carrito {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* Ajustar la caja de aca items del carrito */
+.carrito .carrito-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #667;
+    padding: 20px;
+}
+
+.carrito .carrito-item img {
+    /* Ajustar el margen entre los items y la imagen laterales */
+    margin-right: 20px;
+}
+
+/* Ajustar el nombre de cada producto (Sub-titulo) */
+.carrito .carrito-item .carrito-item-titulo {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Ajustar los items de cantidad para darle mejor estilo */
+.carrito .carrito-item .selector-cantidad {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.carrito .carrito-item .carrito-item-cantidad {
+    border: none;
+    font-size: 18px;
+    background: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Darle estilo a los botones de suma y resta */
+.carrito .carrito-item .selector-cantidad i {
+    font-size: 18px;
+    width: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+/* Ajustar el precio de cada item*/
+.carrito .carrito-item .carrito-item-precio {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Darle estilo al boton de eliminar*/
+.carrito .carrito-item .btn-eliminar {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: black;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    z-index: 20;
+}
+
+.carrito .carrito-item .btn-eliminar i {
+    pointer-events: none;
+}
+
+/* Ajustar el total del carrito */
+.carrito-total {
+    background-color: rgba(157, 152, 152, 0.875);
+    padding: 30px;
+}
+
+.carrito-total .fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Darle estilo al boton de pagar */
+.carrito-total .btn-pagar {
+    display: block;
+    width: 100%;
+    border: none;
+    background: black;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.carrito-total .btn-pagar:hover {
+    scale: 1.05;
+}
+
+/* Seccion responsive */
+@media screen and (max-width:850px) {
+    .contenedor {
+        display: block;
+    }
+
+    .contenedor-items {
+        width: 100% !important;
+        padding: 1rem;
+    }
+
+    .carrito {
+        width: 100%;
+    }
+}
