@@ -194,6 +194,25 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc) {
     // Agrego la funcionalidad de restar a los nuevos elementos
     const botonRestarCantidad = item.getElementsByClassName('restar-cantidad')[0];
     botonRestarCantidad.addEventListener('click', restarCantidad);
+
+    //Actualizar el total y guardar en localStorage
+    actualizarTotalCarrito();
+    guardarCarritoEnLocalStorage();
+}
+
+// Función para guardar el estado actual del carrito en localStorage
+function guardarCarritoEnLocalStorage() {
+    const carritoContenedor = document.getElementsByClassName('carrito-items')[0];
+    localStorage.setItem('carrito', carritoContenedor.innerHTML);
+}
+
+// Función para cargar el carrito desde localStorage
+function cargarCarritoDesdeLocalStorage() {
+    const carritoContenedor = document.getElementsByClassName('carrito-items')[0];
+    const carritoGuardado = localStorage.getItem('carrito');
+    if (carritoGuardado) {
+        carritoContenedor.innerHTML = carritoGuardado;
+    }
 }
 
 // Aca agrego los parámetros y la funcionalidad al boton pagar
